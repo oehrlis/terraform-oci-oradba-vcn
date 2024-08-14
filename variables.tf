@@ -79,7 +79,7 @@ variable "public_newbits" {
 
 variable "inbound_ssh_access" {
   description = "Flag indicating whether public SSH access is to be granted, or not."
-  default     = true
+  default     = false
   type        = bool
 }
 
@@ -91,7 +91,7 @@ variable "inbound_ssh_port" {
 
 variable "inbound_http_access" {
   description = "Flag indicating whether inbound HTTP/HTTPS access is to be granted, or not."
-  default     = true
+  default     = false
   type        = bool
 }
 
@@ -147,7 +147,7 @@ variable "outbound_port_range_max" {
 
 variable "inbound_vpn_access" {
   description = "Flag indicating whether public OpenVPN access is to be granted, or not."
-  default     = true
+  default     = false
   type        = bool
 }
 
