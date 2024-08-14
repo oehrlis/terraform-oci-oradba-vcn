@@ -61,10 +61,10 @@ The module can be customized by a couple of additional parameter. See [variables
 
 The VCN will be configured with a security list allowing the following access:
 
-- Port **22** inbound SSH traffic
-- Port **80** inbound HTTP traffic
-- Port **443** inbound HTTPS traffic
-- Port **6000-6010** inbound MOSH traffic via UTP
+- ~~Port **22** inbound SSH traffic~~ disabled by default
+- ~~Port **80** inbound HTTP traffic~~ disabled by default
+- ~~Port **443** inbound HTTPS traffic~~ disabled by default
+- ~~Port **6000-6010** inbound MOSH traffic via UTP~~ disabled by default
 - All protocols in private subnet
 - All protocols in between public and private subnet
 - All protocols for outbound traffic
