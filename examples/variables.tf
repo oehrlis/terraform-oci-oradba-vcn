@@ -6,7 +6,7 @@
 # Editor.....: Stefan Oehrli
 # Date.......: 2024.08.14
 # Revision...: 
-# Purpose....: Variable definition file for the terraform module oradba vcn.
+# Purpose....: Variable definition file for the terraform module
 # Notes......: -- 
 # Reference..: --
 # License....: Apache License Version 2.0, January 2004 as shown
@@ -71,20 +71,20 @@ variable "vcn_cidr" {
 
 # Public Subnet parameters -----------------------------------------------------
 variable "public_netnum" {
-  description = "0-based index of the private subnet when the VCN's CIDR is masked with the corresponding newbit value."
+  description = "0-based index of the public subnet when the VCN's CIDR is masked with the corresponding newbit value."
   default     = 0
   type        = number
 }
 
 variable "public_newbits" {
-  description = "The difference between the VCN's netmask and the desired private subnet mask"
+  description = "The difference between the VCN's netmask and the desired public subnet mask"
   default     = 8
   type        = number
 }
 
 variable "inbound_ssh_access" {
   description = "Flag indicating whether public SSH access is to be granted, or not."
-  default     = true
+  default     = false
   type        = bool
 }
 
@@ -96,7 +96,7 @@ variable "inbound_ssh_port" {
 
 variable "inbound_http_access" {
   description = "Flag indicating whether inbound HTTP/HTTPS access is to be granted, or not."
-  default     = true
+  default     = false
   type        = bool
 }
 
@@ -148,11 +148,9 @@ variable "outbound_port_range_max" {
   default     = 20999
 }
 
-
-
 variable "inbound_vpn_access" {
   description = "Flag indicating whether public OpenVPN access is to be granted, or not."
-  default     = true
+  default     = false
   type        = bool
 }
 

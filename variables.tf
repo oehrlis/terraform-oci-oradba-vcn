@@ -143,8 +143,6 @@ variable "outbound_port_range_max" {
   default     = 20999
 }
 
-
-
 variable "inbound_vpn_access" {
   description = "Flag indicating whether public OpenVPN access is to be granted, or not."
   default     = false
