@@ -1,24 +1,23 @@
-# ---------------------------------------------------------------------------
-# Trivadis - Part of Accenture, Platform Factory - Data Platforms
-# Saegereistrasse 29, 8152 Glattbrugg, Switzerland
-# ---------------------------------------------------------------------------
+# ------------------------------------------------------------------------------
+# OraDBA - Oracle Database Infrastructur and Security, 5630 Muri, Switzerland
+# ------------------------------------------------------------------------------
 # Name.......: main.tf
-# Author.....: Stefan Oehrli (oes) stefan.oehrli@accenture.com
+# Author.....: Stefan Oehrli (oes) stefan.oehrli@oradba.ch
 # Editor.....: Stefan Oehrli
-# Date.......: 2023.04.19
+# Date.......: 2024.08.14
 # Revision...: 
-# Purpose....: Main file to use terraform module tvdlab vcn.
+# Purpose....: Main file to use terraform module oradba vcn.
 # Notes......: -- 
 # Reference..: --
 # License....: Apache License Version 2.0, January 2004 as shown
 #              at http://www.apache.org/licenses/
-# ---------------------------------------------------------------------------
+# ------------------------------------------------------------------------------
 
 terraform {
   required_providers {
     oci = {
       source  = "oracle/oci"
-      version = ">= 4.0.0"
+      version = ">= 0.0.1"
     }
   }
 }
@@ -32,4 +31,4 @@ provider "oci" {
   region           = var.region
 }
 
-# --- EOF -------------------------------------------------------------------
+# --- EOF ----------------------------------------------------------------------
