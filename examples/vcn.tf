@@ -1,24 +1,23 @@
 # ------------------------------------------------------------------------------
-# Trivadis - Part of Accenture, Platform Factory - Data Platforms
-# Saegereistrasse 29, 8152 Glattbrugg, Switzerland
+# OraDBA - Oracle Database Infrastructur and Security, 5630 Muri, Switzerland
 # ------------------------------------------------------------------------------
 # Name.......: main.tf
-# Author.....: Stefan Oehrli (oes) stefan.oehrli@accenture.com
+# Author.....: Stefan Oehrli (oes) stefan.oehrli@oradba.ch
 # Editor.....: Stefan Oehrli
-# Date.......: 2023.03.09
+# Date.......: 2024.08.14
 # Revision...: 
-# Purpose....: Configuration to build the training vcn using tvdlab-vcn.
+# Purpose....: Configuration to build the training vcn using oradba-vcn.
 # Notes......: 
 # Reference..: --
 # License....: Apache License Version 2.0, January 2004 as shown
 #              at http://www.apache.org/licenses/
 # ------------------------------------------------------------------------------
-module "tvdlab-vcn" {
-  source = "Trivadis/tvdlab-vcn/oci"
+module "oradba-vcn" {
+  source = "oehrlis/oradba-vcn/oci"
   # limit module version using ~>, allows only the rightmost version component to increment
   # e.g. 4.0.2 and 4.0.10 but not 4.1.0 see
   # https://developer.hashicorp.com/terraform/language/expressions/version-constraints
-  version = "~> 4.0.0"
+  version = "~> 0.0.1"
 
   # - Mandatory Parameters -----------------------------------------------------
   compartment_id = var.compartment_ocid
