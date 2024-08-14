@@ -22,6 +22,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - initial version based on [terraform-oci-tvdlab-vcn](https://github.com/Trivadis/terraform-oci-tvdlab-vcn) v4.0.1
 
+### Changed
+
+- remove information related to Trivadis / tvdlab
+
 ## [4.0.0] - 2023-04-19
 
 ## History

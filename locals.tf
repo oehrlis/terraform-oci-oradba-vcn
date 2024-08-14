@@ -48,10 +48,10 @@ locals {
   }]
 
   ingress_rules = concat([],
-    var.inbound_ssh_access == false ? local.ingress_rule_ssh : [],
-    var.inbound_http_access == false ? local.ingress_rule_http : [],
-    var.inbound_vpn_access == false ? local.ingress_rule_vpn : [],
-    var.inbound_mosh_access == false ? local.ingress_rule_mosh : []
+    var.inbound_ssh_access == true ? local.ingress_rule_ssh : [],
+    var.inbound_http_access == true ? local.ingress_rule_http : [],
+    var.inbound_vpn_access == true ? local.ingress_rule_vpn : [],
+    var.inbound_mosh_access == true ? local.ingress_rule_mosh : []
   )
 
   egress_rule_http = [{
