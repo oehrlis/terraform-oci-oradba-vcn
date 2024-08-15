@@ -62,4 +62,9 @@ output "private_subnet_id" {
   description = "OCIDs of private subnet in VCN. "
   value       = oci_core_subnet.private_subnet[*].id
 }
+
+output "ingress_rules" {
+  description = "Ingress Rules"
+  value       = local.ingress_rules
+}
 # --- EOF ----------------------------------------------------------------------
